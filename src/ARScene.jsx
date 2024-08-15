@@ -20,7 +20,7 @@ function ARScene() {
         <a-entity
           position="0 0 0"
           scale="0.05 0.05 0.05"
-          gltf-model="/assets/shiba/scene.gltf"
+          gltf-model="src/assets/shiba/scene.gltf"
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
