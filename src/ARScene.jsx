@@ -14,7 +14,7 @@ function ARScene() {
       <a-marker preset="hiro">
         <a-entity
           position="0 0 0"
-          scale="0.05 0.05 0.05"
+          scale="0.55 0.55 0.55"
           gltf-model="/shiba/scene.gltf"
         ></a-entity>
       </a-marker>
