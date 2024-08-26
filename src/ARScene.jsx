@@ -14,7 +14,7 @@ function ARScene() {
   return (
     <a-scene ref={sceneRef} embedded arjs="sourceType: webcam;">
       <a-marker preset="hiro">
-        <Text />
+      <Text position="0 0 0" scale="1 1 1" />
         {/* <a-entity
           position="0 0 0"
           scale="0.55 0.55 0.55"
