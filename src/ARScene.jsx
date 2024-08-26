@@ -14,12 +14,12 @@ function ARScene() {
   return (
     <a-scene ref={sceneRef} embedded arjs="sourceType: webcam;">
       <a-marker preset="hiro">
-      <Text position="0 0 0" scale="1 1 1" />
-        {/* <a-entity
+        <Text position="0 0 0" scale="1 1 1" />
+        <a-entity
           position="0 0 0"
           scale="0.55 0.55 0.55"
           gltf-model="/shiba/scene.gltf"
-        ></a-entity> */}
+        ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
