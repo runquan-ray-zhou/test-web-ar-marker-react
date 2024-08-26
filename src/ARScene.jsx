@@ -262,6 +262,7 @@ import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
           class="clickable"
           visible="true"
           gesture-handler
+          look-at="[camera]"
         ></a-entity>
         
         <a-entity
@@ -271,6 +272,7 @@ import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
           class="clickable"
           visible="true"
           gesture-handler
+          look-at="[camera]"
         ></a-entity>
 
       </a-marker>
