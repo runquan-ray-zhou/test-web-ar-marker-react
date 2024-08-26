@@ -255,15 +255,24 @@ import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
         cursor="fuse: false; rayOrigin: mouse;"
         id="markerA"
       >
-        <a-entity
+          <a-entity
           position="0 0 0"
           scale="5 5 5"
-          // gltf-model="/shiba/scene.gltf"
-          text="value: This is a Marker; color: orange; width: 5; align: center;"
+          gltf-model="/shiba/scene.gltf"
           class="clickable"
           visible="true"
           gesture-handler
         ></a-entity>
+        
+        <a-entity
+          position="0 1 0"
+          scale="5 5 5"
+          text="value: Pinch Me! Rub Me!; color: orange; width: 5; align: center;"
+          class="clickable"
+          visible="true"
+          gesture-handler
+        ></a-entity>
+
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
