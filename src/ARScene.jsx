@@ -257,7 +257,7 @@ import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
       >
           <a-entity
           position="0 0 0"
-          scale="0.5 0.5 0.5"
+          scale="1 1 1"
           gltf-model="/shiba/scene.gltf"
           class="clickable"
           visible="true"
@@ -266,8 +266,8 @@ import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
         
         <a-entity
           position="0 1 0"
-          scale="5 5 5"
-          text="value: Pinch Me! Rub Me!; color: orange; width: 5; align: center;"
+          scale="3 3 3"
+          text="value: Pinch Me! Rub Me!; color: orange; width: 3; align: center; "
           class="clickable"
           visible="true"
           gesture-handler
