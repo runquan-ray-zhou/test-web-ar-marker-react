@@ -258,7 +258,8 @@ import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
         <a-entity
           position="0 0 0"
           scale="0.55 0.55 0.55"
-          gltf-model="/shiba/scene.gltf"
+          // gltf-model="/shiba/scene.gltf"
+          text="value: This is a Marker; color: orange; width: 2"
           class="clickable"
           gesture-handler
         ></a-entity>
