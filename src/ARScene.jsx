@@ -282,6 +282,7 @@ AFRAME.registerComponent('markerhandler', {
   >
       {/* <a-marker preset="hiro"> */}
       <a-marker
+        markerhandler
         preset="hiro"
         raycaster="objects: .clickable"
         emitevents="true"
