@@ -257,7 +257,7 @@ import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
       >
           <a-entity
           position="0 0 0"
-          scale="5 5 5"
+          scale="0.5 0.5 0.5"
           gltf-model="/shiba/scene.gltf"
           class="clickable"
           visible="true"
