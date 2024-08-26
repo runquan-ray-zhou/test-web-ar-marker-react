@@ -289,14 +289,14 @@ AFRAME.registerComponent('markerhandler', {
         cursor="fuse: false; rayOrigin: mouse;"
         id="animated-marker"
       >
-          <a-entity id="modal" visible="false" position="0 1.6 -1">
-    <a-plane width="2" height="1.5" color="#CCC">
-      <a-text id="modal-text" value="Website Content" align="center" width="2" position="0 0.5 0.01"></a-text>
-      <a-plane id="close-button" color="red" width="0.2" height="0.2" position="0.9 0.65 0.02">
-        <a-text value="X" align="center" width="1" position="0 0 0.01"></a-text>
-      </a-plane>
-    </a-plane>
-  </a-entity>
+          <a-entity id="modal" visible="false" position="0 2 -1" scale="0.5 0.5 0.5">
+            <a-plane width="4" height="3" color="#CCC">
+              <a-text id="modal-text" value="Welcome to ASTC" align="center" width="3.5" position="0 0.8 0.01"></a-text>
+              <a-plane id="close-button" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02">
+                <a-text value="X" align="center" width="2" position="0 0 0.01"></a-text>
+              </a-plane>
+            </a-plane>
+          </a-entity>
           <a-entity
           id="animated-model"
           position="0 0 0"
