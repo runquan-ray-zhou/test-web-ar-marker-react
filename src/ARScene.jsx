@@ -26,7 +26,7 @@ AFRAME.registerComponent('markerhandler', {
       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
       if (aEntity && intersectedElement === aEntity) {
         // Replace with your actual content
-        showModal("Welcome to our website!\nHere's some information about our product.");
+        showModal("Welcome to ASTC!!!!");
       }
     });
 
@@ -291,7 +291,7 @@ AFRAME.registerComponent('markerhandler', {
       >
           <a-entity id="modal" visible="false" position="0 2 -1" scale="0.5 0.5 0.5">
             <a-plane width="4" height="3" color="#CCC">
-              <a-text id="modal-text" value="Welcome to ASTC" align="center" width="3.5" position="0 0.8 0.01"></a-text>
+              <a-text id="modal-text" value="Welcome to ASTC!!!!" align="center" width="3.5" position="0 0.8 0.01"></a-text>
               <a-plane id="close-button" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02">
                 <a-text value="X" align="center" width="2" position="0 0 0.01"></a-text>
               </a-plane>
@@ -311,7 +311,7 @@ AFRAME.registerComponent('markerhandler', {
         <a-entity
           position="0 1 0"
           scale="3 3 3"
-          text="value: Pinch Me! Rub Me!; color: orange; width: 3; align: center; "
+          text="value: Pinch Me! Rub Me! Pat Me!; color: orange; width: 3; align: center; "
           class="clickable"
           visible="true"
           gesture-handler
