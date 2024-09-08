@@ -18,13 +18,15 @@ AFRAME.registerComponent("markerhandler", {
     const modal = document.querySelector("#modal");
     const modalText = document.querySelector("#modal-text");
     const closeButton = document.querySelector("#close-button");
+    const modalContainer = document.querySelector("#modal-container");
 
     const modalValue = modalText.value;
 
     // Function to show modal
     const showModal = () => {
-      modalText.setAttribute("value", modalValue);
-      modal.setAttribute("visible", true);
+      modalContainer.style.display = "block";
+      // modalText.setAttribute("value", modalValue);
+      // modal.setAttribute("visible", true);
     };
 
     // Function to hide modal
@@ -364,12 +366,14 @@ function ARScene() {
         </a-entity>
       </a-scene>
       <div
+        id="modal-container"
         style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          display: "none",
+          position: "absolute",
+          top: "20%",
+          left: "50%",
           transform: "translate(-50%, -50%)",
-          width: "400px",
+          width: "200px",
           backgroundColor: "white",
           padding: "20px",
           borderRadius: "10px",
