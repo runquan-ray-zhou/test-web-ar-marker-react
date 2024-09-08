@@ -311,6 +311,7 @@ function ARScene() {
           <a-entity
             id="animated-model"
             position="0 0 0"
+            rotation="-90 0 0"
             scale="1 1 1"
             gltf-model="/shiba/scene.gltf"
             class="clickable"
