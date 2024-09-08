@@ -312,7 +312,7 @@ function ARScene() {
             id="animated-model"
             position="0 0 0"
             scale="1 1 1"
-            gltf-model="/animated_dog_shiba_inu/scene.gltf"
+            gltf-model="/shiba/scene.gltf"
             class="clickable"
             visible="true"
             gesture-handler
