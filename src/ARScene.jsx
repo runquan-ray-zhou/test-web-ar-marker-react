@@ -26,7 +26,7 @@ AFRAME.registerComponent('markerhandler', {
       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
       if (aEntity && intersectedElement === aEntity) {
         // Replace with your actual content
-        showModal("Welcome to ASTC!!!!");
+        showModal(content);
       }
     });
 
@@ -324,7 +324,7 @@ AFRAME.registerComponent('markerhandler', {
           <li>Item 2</li>
         </ul>
         </div>} align="center" width="3.5" position="0 0.8 0.01"></a-text>
-              <a-plane id="close-button" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02">
+              <a-plane id="close-button" class="clickable" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02">
                 <a-text value="X" align="center" width="2" position="0 0 0.01"></a-text>
               </a-plane>
             </a-plane>
