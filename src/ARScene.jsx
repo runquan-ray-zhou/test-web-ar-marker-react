@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "aframe";
 import "@ar-js-org/ar.js/aframe/build/aframe-ar.js";
 
@@ -288,6 +289,8 @@ AFRAME.registerComponent("gesture-handler", {
 function ARScene() {
   const sceneRef = useRef(null);
 
+  const navigate = useNavigate();
+
   return (
     // <a-scene ref={sceneRef} embedded arjs="sourceType: webcam;">
     <>
@@ -384,7 +387,12 @@ function ARScene() {
       >
         <h2>HTML Modal Content</h2>
         <p>You can place HTML content here, like forms, images, or videos.</p>
-        <button id="closeButton">Close</button>
+        <button
+          // id="closeButton"
+          onClick={() => useNavigate("www.google.com")}
+        >
+          Close
+        </button>
       </div>
     </>
   );
