@@ -45,7 +45,7 @@ AFRAME.registerComponent('markerhandler', {
 
     closeButton.addEventListener('click', function(ev) {
       ev.stopPropagation();
-      window.open('www.google.com', '_blank');
+      hideModal();
     });
 
   }
