@@ -288,12 +288,6 @@ AFRAME.registerComponent("gesture-handler", {
 function ARScene() {
   const sceneRef = useRef(null);
 
-  const [modalVisible, setModalVisible] = useState(false);
-
-  const toggleModal = () => {
-    setModalVisible(!modalVisible);
-  };
-
   return (
     // <a-scene ref={sceneRef} embedded arjs="sourceType: webcam;">
     <>
