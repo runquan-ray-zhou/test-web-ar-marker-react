@@ -18,33 +18,19 @@ AFRAME.registerComponent("markerhandler", {
     const modal = document.querySelector("#modal");
     const modalText = document.querySelector("#modal-text");
     const closeButton = document.querySelector("#close-button");
-    const overlayModal = document.querySelector("#overlay-modal");
-    const closeOverlay = document.querySelector("#close-overlay");
-
-    const showModal = () => {
-      overlayModal.style.display = "block";
-    };
-
-    const hideModal = () => {
-      overlayModal.style.display = "none";
-    };
-
-    // animatedMarker.addEventListener("click", showModal);
-
-    closeOverlay.addEventListener("click", hideModal);
 
     const modalValue = modalText.value;
 
     // Function to show modal
-    // const showModal = () => {
-    //   modalText.setAttribute("value", modalValue);
-    //   modal.setAttribute("visible", true);
-    // };
+    const showModal = () => {
+      modalText.setAttribute("value", modalValue);
+      modal.setAttribute("visible", true);
+    };
 
     // Function to hide modal
-    // const hideModal = () => {
-    //   modal.setAttribute("visible", false);
-    // };
+    const hideModal = () => {
+      modal.setAttribute("visible", false);
+    };
 
     // Show modal on click
     animatedMarker.addEventListener("click", function (ev, target) {
@@ -58,10 +44,10 @@ AFRAME.registerComponent("markerhandler", {
     // Hide modal when close button is clicked
     // closeButton.addEventListener('click', hideModal);
 
-    // closeButton.addEventListener("click", function (ev) {
-    //   ev.stopPropagation();
-    //   hideModal();
-    // });
+    closeButton.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      hideModal();
+    });
   },
 });
 
@@ -340,9 +326,9 @@ function ARScene() {
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
-      {/* <a-entity camera look-controls>
+      <a-entity camera look-controls>
         <a-cursor></a-cursor>
-      </a-entity> */}
+      </a-entity>
       <a-entity
         id="modal"
         visible="false"
@@ -375,26 +361,6 @@ function ARScene() {
           </a-plane>
         </a-plane>
       </a-entity>
-      <div
-        id="overlay-modal"
-        style={{
-          display: "none",
-          position: "absolute",
-          top: "20%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "400px",
-          backgroundColor: "white",
-          padding: "20px",
-          borderRadius: "10px",
-          boxShadow: "0 0 10px rgba(0,0,0,0.5)",
-          zIndex: 100,
-        }}
-      >
-        <h2>HTML Modal Content</h2>
-        <p>You can place HTML content here, like forms, images, or videos.</p>
-        <button id="close-overlay">Close</button>
-      </div>
     </a-scene>
   );
 }
