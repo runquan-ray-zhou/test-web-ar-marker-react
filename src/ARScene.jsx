@@ -365,10 +365,9 @@ function ARScene() {
       </a-scene>
       <div
         style={{
-          display: "none",
-          position: "absolute",
-          top: "20%",
-          left: "50%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           transform: "translate(-50%, -50%)",
           width: "400px",
           backgroundColor: "white",
