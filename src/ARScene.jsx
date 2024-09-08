@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import 'aframe';
 import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
 
@@ -20,9 +19,11 @@ AFRAME.registerComponent('markerhandler', {
     const modalText = document.querySelector("#modal-text");
     const closeButton = document.querySelector("#close-button");
 
+    const modalValue = modalText.value
+
     // Function to show modal
-    const showModal = (content) => {
-      modalText.setAttribute('value', content);
+    const showModal = () => {
+      modalText.setAttribute('value', modalValue);
       modal.setAttribute('visible', true);
     };
 
@@ -36,7 +37,7 @@ AFRAME.registerComponent('markerhandler', {
       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
       if (aEntity && intersectedElement === aEntity) {
         // Replace with your actual content
-        showModal("yo");
+        showModal();
       }
     });
 
