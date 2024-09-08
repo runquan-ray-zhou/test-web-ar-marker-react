@@ -384,12 +384,12 @@ function ARScene() {
       >
         <h2>HTML Modal Content</h2>
         <p>You can place HTML content here, like forms, images, or videos.</p>
-        <a href="www.google.com">
-          <button
-          // id="closeButton"
-          >
-            Close
-          </button>
+        <a
+          href="https://www.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button>Close</button>
         </a>
       </div>
     </>
