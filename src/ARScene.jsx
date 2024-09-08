@@ -45,7 +45,7 @@ AFRAME.registerComponent('markerhandler', {
 
     closeButton.addEventListener('click', function(ev) {
       ev.stopPropagation();
-      hideModal();
+      window.open('www.google.com', '_blank');
     });
 
   }
@@ -283,8 +283,6 @@ AFRAME.registerComponent('markerhandler', {
   });
 
   function ARScene() {
-  
-  const navigate = useNavigate();
 
   const sceneRef = useRef(null);
 
@@ -337,7 +335,7 @@ AFRAME.registerComponent('markerhandler', {
       <a-entity id="modal" visible="false" position="0 0 -1" scale="0.12 0.12 0.12">
             <a-plane width="4" height="3" color="#CCC">
               <a-text id="modal-text" value="HTML content goes here" align="center" width="3.5" position="0 0.8 0.01"></a-text>
-              <a-plane onClick={() => navigate("www.google.com")} id="close-button" class="clickable" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02" close-button>
+              <a-plane id="close-button" class="clickable" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02" close-button>
                 <a-text value="X" align="center" width="2" position="0 0 0.01"></a-text>
               </a-plane>
             </a-plane>
