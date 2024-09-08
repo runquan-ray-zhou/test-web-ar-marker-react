@@ -2,6 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import 'aframe';
 import '@ar-js-org/ar.js/aframe/build/aframe-ar.js';
 
+AFRAME.registerComponent('close-button', {
+  init: function() {
+    this.el.addEventListener('click', function() {
+      const modal = document.querySelector("#modal");
+      modal.setAttribute('visible', false);
+    });
+  }
+})
+
 AFRAME.registerComponent('markerhandler', {
   init: function() {
     const animatedMarker = document.querySelector("#animated-marker");
@@ -10,9 +19,11 @@ AFRAME.registerComponent('markerhandler', {
     const modalText = document.querySelector("#modal-text");
     const closeButton = document.querySelector("#close-button");
 
+    const modalValue = modalText.value
+
     // Function to show modal
-    const showModal = (content) => {
-      modalText.setAttribute('value', content);
+    const showModal = () => {
+      modalText.setAttribute('value', modalValue);
       modal.setAttribute('visible', true);
     };
 
@@ -26,19 +37,18 @@ AFRAME.registerComponent('markerhandler', {
       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
       if (aEntity && intersectedElement === aEntity) {
         // Replace with your actual content
-        showModal(`
-    <h1>Welcome to ASTC!</h1>
-    <p>This is <strong>HTML</strong> content.</p>
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-    </ul>
-  `);
+        showModal();
       }
     });
 
     // Hide modal when close button is clicked
-    closeButton.addEventListener('click', hideModal);
+    // closeButton.addEventListener('click', hideModal);
+
+    closeButton.addEventListener('click', function(ev) {
+      ev.stopPropagation();
+      hideModal();
+    });
+
   }
 });
 
@@ -320,10 +330,13 @@ AFRAME.registerComponent('markerhandler', {
 
       </a-marker>
       <a-entity camera></a-entity>
+      <a-entity camera look-controls>
+        <a-cursor></a-cursor>
+      </a-entity>
       <a-entity id="modal" visible="false" position="0 0 -1" scale="0.12 0.12 0.12">
             <a-plane width="4" height="3" color="#CCC">
               <a-text id="modal-text" value="HTML content goes here" align="center" width="3.5" position="0 0.8 0.01"></a-text>
-              <a-plane id="close-button" class="clickable" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02">
+              <a-plane id="close-button" class="clickable" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02" close-button>
                 <a-text value="X" align="center" width="2" position="0 0 0.01"></a-text>
               </a-plane>
             </a-plane>
