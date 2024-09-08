@@ -322,16 +322,7 @@ AFRAME.registerComponent('markerhandler', {
       <a-entity camera></a-entity>
       <a-entity id="modal" visible="false" position="0 0 -1" scale="0.12 0.12 0.12">
             <a-plane width="4" height="3" color="#CCC">
-              <a-text id="modal-text" value={
-                <div>
-                  <h1>Welcome to ASTC!</h1>
-        <p>This is <strong>HTML</strong> content.</p>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-        </ul>
-        </div>} 
-        align="center" width="3.5" position="0 0.8 0.01"></a-text>
+              <a-text id="modal-text" value="HTML content goes here" align="center" width="3.5" position="0 0.8 0.01"></a-text>
               <a-plane id="close-button" class="clickable" color="red" width="0.4" height="0.4" position="1.7 1.2 0.02">
                 <a-text value="X" align="center" width="2" position="0 0 0.01"></a-text>
               </a-plane>
