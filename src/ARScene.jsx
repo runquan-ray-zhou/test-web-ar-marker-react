@@ -389,7 +389,7 @@ function ARScene() {
         <p>You can place HTML content here, like forms, images, or videos.</p>
         <button
           // id="closeButton"
-          onClick={() => useNavigate("www.google.com")}
+          onClick={() => navigate("www.google.com")}
         >
           Close
         </button>
