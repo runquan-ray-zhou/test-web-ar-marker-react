@@ -17,7 +17,7 @@ AFRAME.registerComponent("markerhandler", {
     const aEntity = document.querySelector("#animated-model");
     const modal = document.querySelector("#modal");
     const modalText = document.querySelector("#modal-text");
-    const closeButton = document.querySelector("#close-button");
+    const closeButton = document.querySelector("#closeButton");
     const modalContainer = document.querySelector("#modal-container");
 
     const modalValue = modalText.value;
@@ -31,7 +31,8 @@ AFRAME.registerComponent("markerhandler", {
 
     // Function to hide modal
     const hideModal = () => {
-      modal.setAttribute("visible", false);
+      modalContainer.style.display = "none";
+      // modal.setAttribute("visible", false);
     };
 
     // Show modal on click
@@ -287,6 +288,12 @@ AFRAME.registerComponent("gesture-handler", {
 function ARScene() {
   const sceneRef = useRef(null);
 
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!modalVisible);
+  };
+
   return (
     // <a-scene ref={sceneRef} embedded arjs="sourceType: webcam;">
     <>
@@ -383,7 +390,7 @@ function ARScene() {
       >
         <h2>HTML Modal Content</h2>
         <p>You can place HTML content here, like forms, images, or videos.</p>
-        {/* <button onClick={toggleModal}>Close</button> */}
+        <button id="closeButton">Close</button>
       </div>
     </>
   );
