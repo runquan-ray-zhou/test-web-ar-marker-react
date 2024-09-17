@@ -295,19 +295,8 @@ function ARScene() {
             visible="true"
             gesture-handler
             look-at="[camera]"
-            animation-mixer="loop: repeat"
+            animation-mixer="clip: *; loop: repeat; timeScale: 1"
           ></a-entity>
-
-          {/* <a-entity
-            position="0 1 0"
-            rotation="-90 0 0"
-            scale="3 3 3"
-            text="value: Pinch Me! Rub Me! Pat Me!; color: orange; width: 3; align: center; "
-            class="clickable"
-            visible="true"
-            gesture-handler
-            look-at="[camera]"
-          ></a-entity> */}
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
