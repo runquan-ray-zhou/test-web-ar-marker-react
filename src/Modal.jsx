@@ -7,7 +7,7 @@ export default function Modal() {
       style={{
         display: "none",
         position: "absolute",
-        top: "20%",
+        top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
         width: "200px",
@@ -19,10 +19,23 @@ export default function Modal() {
       }}
     >
       <div className="modal-container-info">
-        <h2>HTML Modal Content</h2>
-        <p>You can place HTML content here, like forms, images, or videos.</p>
+        <div className="modal-container-info-header">
+          <p>Find Presentations</p>
+          <p>Location: S102D</p>
+        </div>
+        <div className="modal-container-info-body">
+          <div className="modal-container-info-body-button">
+            <button>Happening Now</button>
+            <button>Nearby</button>
+          </div>
+          <div>
+            <p>9:00AM</p>
+          </div>
+          <div></div>
+        </div>
+
         <a
-          href="https://www.google.com"
+          href="https://astc-web-companion-test.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
         >
