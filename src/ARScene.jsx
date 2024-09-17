@@ -293,7 +293,7 @@ function ARScene() {
             gltf-model="/dragonfly/scene.gltf"
             class="clickable"
             visible="true"
-            gesture-handler
+            // gesture-handler
             look-at="[camera]"
             animation-mixer="clip: *; loop: repeat; timeScale: 1; autoplay='true'"
           ></a-entity>
