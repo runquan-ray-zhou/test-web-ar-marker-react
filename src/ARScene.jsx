@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "aframe";
 import "@ar-js-org/ar.js/aframe/build/aframe-ar.js";
+import Modal from "./Modal";
 
 AFRAME.registerComponent("close-button", {
   init: function () {
@@ -289,24 +290,22 @@ function ARScene() {
   const sceneRef = useRef(null);
 
   return (
-    // <a-scene ref={sceneRef} embedded arjs="sourceType: webcam;">
     <>
       <a-scene
+        id="scene"
         arjs="sourceType: webcam;"
         embedded
         renderer="logarithmicDepthBuffer: true;"
         vr-mode-ui="enabled: false"
         gesture-detector
-        id="scene"
       >
-        {/* <a-marker preset="hiro"> */}
         <a-marker
+          id="animated-marker"
           markerhandler
           preset="hiro"
           raycaster="objects: .clickable"
           emitevents="true"
           cursor="fuse: false; rayOrigin: mouse;"
-          id="animated-marker"
         >
           <a-entity
             id="animated-model"
@@ -322,6 +321,7 @@ function ARScene() {
 
           <a-entity
             position="0 1 0"
+            rotation="-90 0 0"
             scale="3 3 3"
             text="value: Pinch Me! Rub Me! Pat Me!; color: orange; width: 3; align: center; "
             class="clickable"
@@ -331,48 +331,14 @@ function ARScene() {
           ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
-        <a-entity camera look-controls>
-          <a-cursor></a-cursor>
-        </a-entity>
-        <a-entity
-          id="modal"
-          visible="false"
-          position="0 0 -1"
-          scale="0.12 0.12 0.12"
-        >
-          <a-plane width="4" height="3" color="#CCC">
-            <a-text
-              id="modal-text"
-              value="HTML content goes here"
-              align="center"
-              width="3.5"
-              position="0 0.8 0.01"
-            ></a-text>
-            <a-plane
-              id="close-button"
-              class="clickable"
-              color="red"
-              width="0.4"
-              height="0.4"
-              position="1.7 1.2 0.02"
-              close-button
-            >
-              <a-text
-                value="X"
-                align="center"
-                width="2"
-                position="0 0 0.01"
-              ></a-text>
-            </a-plane>
-          </a-plane>
-        </a-entity>
       </a-scene>
+      <Modal />
       <div
         id="modal-container"
         style={{
           display: "none",
           position: "absolute",
-          top: "20%",
+          top: "40%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           width: "200px",
