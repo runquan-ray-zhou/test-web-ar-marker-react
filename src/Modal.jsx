@@ -1,3 +1,5 @@
+import "./Modal.css";
+
 export default function Modal() {
   return (
     <div
@@ -5,7 +7,7 @@ export default function Modal() {
       style={{
         display: "none",
         position: "absolute",
-        top: "10%",
+        top: "20%",
         left: "50%",
         transform: "translate(-50%, -50%)",
         width: "200px",
@@ -16,15 +18,17 @@ export default function Modal() {
         zIndex: 100,
       }}
     >
-      <h2>HTML Modal Content</h2>
-      <p>You can place HTML content here, like forms, images, or videos.</p>
-      <a
-        href="https://www.google.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button>Close</button>
-      </a>
+      <div className="modal-container-info">
+        <h2>HTML Modal Content</h2>
+        <p>You can place HTML content here, like forms, images, or videos.</p>
+        <a
+          href="https://www.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button>Close</button>
+        </a>
+      </div>
     </div>
   );
 }

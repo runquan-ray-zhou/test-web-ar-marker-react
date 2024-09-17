@@ -16,42 +16,20 @@ AFRAME.registerComponent("markerhandler", {
   init: function () {
     const animatedMarker = document.querySelector("#animated-marker");
     const aEntity = document.querySelector("#animated-model");
-    const modal = document.querySelector("#modal");
-    const modalText = document.querySelector("#modal-text");
-    const closeButton = document.querySelector("#closeButton");
     const modalContainer = document.querySelector("#modal-container");
 
-    const modalValue = modalText.value;
-
-    // Function to show modal
     const showModal = () => {
       modalContainer.style.display = "block";
-      // modalText.setAttribute("value", modalValue);
-      // modal.setAttribute("visible", true);
     };
-
-    // Function to hide modal
     const hideModal = () => {
       modalContainer.style.display = "none";
-      // modal.setAttribute("visible", false);
     };
-
-    // Show modal on click
     animatedMarker.addEventListener("click", function (ev, target) {
       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
       if (aEntity && intersectedElement === aEntity) {
-        // Replace with your actual content
         showModal();
       }
     });
-
-    // Hide modal when close button is clicked
-    // closeButton.addEventListener('click', hideModal);
-
-    // closeButton.addEventListener("click", function (ev) {
-    //   ev.stopPropagation();
-    //   hideModal();
-    // });
   },
 });
 
@@ -312,7 +290,7 @@ function ARScene() {
             position="0 0 0"
             rotation="-90 0 0"
             scale="1 1 1"
-            gltf-model="/shiba/scene.gltf"
+            gltf-model="/dragonfly/scene.gltf"
             class="clickable"
             visible="true"
             gesture-handler
@@ -333,32 +311,6 @@ function ARScene() {
         <a-entity camera></a-entity>
       </a-scene>
       <Modal />
-      <div
-        id="modal-container"
-        style={{
-          display: "none",
-          position: "absolute",
-          top: "40%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "200px",
-          backgroundColor: "white",
-          padding: "20px",
-          borderRadius: "10px",
-          boxShadow: "0 0 10px rgba(0,0,0,0.5)",
-          zIndex: 100,
-        }}
-      >
-        <h2>HTML Modal Content</h2>
-        <p>You can place HTML content here, like forms, images, or videos.</p>
-        <a
-          href="https://www.google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Close</button>
-        </a>
-      </div>
     </>
   );
 }
