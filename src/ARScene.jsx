@@ -289,15 +289,16 @@ function ARScene() {
             id="animated-model"
             position="0 0 0"
             rotation="-90 0 0"
-            scale="1 1 1"
+            scale="2 2 2"
             gltf-model="/dragonfly/scene.gltf"
             class="clickable"
             visible="true"
             gesture-handler
             look-at="[camera]"
+            animation-mixer="loop: repeat"
           ></a-entity>
 
-          <a-entity
+          {/* <a-entity
             position="0 1 0"
             rotation="-90 0 0"
             scale="3 3 3"
@@ -306,7 +307,7 @@ function ARScene() {
             visible="true"
             gesture-handler
             look-at="[camera]"
-          ></a-entity>
+          ></a-entity> */}
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
