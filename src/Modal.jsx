@@ -23,7 +23,7 @@ export default function Modal() {
           <p>Find Presentations</p>
           <p>Location: S102D</p>
         </div>
-        <div className="modal-container-info-body">
+        {/* <div className="modal-container-info-body">
           <div className="modal-container-info-body-button">
             <button>Happening Now</button>
             <button>Nearby</button>
@@ -56,7 +56,7 @@ export default function Modal() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <a
           href="https://astc-web-companion-test.netlify.app/"
