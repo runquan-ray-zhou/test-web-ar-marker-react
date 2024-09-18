@@ -1,5 +1,13 @@
-.modal-container-info {
-  h2 {
-    color: green;
+.Modal {
+  .modal-container-info {
+    display: flex;
+    flex-direction: column;
+    .modal-container-info-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    h2 {
+      color: green;
+    }
   }
 }

@@ -28,10 +28,34 @@ export default function Modal() {
             <button>Happening Now</button>
             <button>Nearby</button>
           </div>
-          <div>
-            <p>9:00AM</p>
+          <div className="modal-container-info-body-time">
+            <p>1:50pm-2:05pm</p>
           </div>
-          <div></div>
+          <div className="modal-container-info-body-session">
+            <div className="Session-icon">
+              <span>
+                <i className="fa-regular fa-calendar"></i>
+              </span>
+            </div>
+            <div className="Session-info">
+              <div className="Session-name">
+                <p>
+                  Airborne Interactive: Elevating the Museum Experience with
+                  Spatial Computing:
+                </p>
+              </div>
+              <div className="Session-presenter">
+                <p>Presenter:</p>
+                <p>
+                  Shiri Burson AYR Immersive, Chicago, Illinois, United States.
+                </p>
+              </div>
+              <div className="Session-location">
+                <p>Location:</p>
+                <p>Exhibit Hall: Stage</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <a
