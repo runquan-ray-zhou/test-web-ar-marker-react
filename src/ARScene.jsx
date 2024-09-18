@@ -278,7 +278,7 @@ function ARScene() {
             position="0 0 0"
             rotation="-90 0 0"
             scale="2 2 2"
-            gltf-model="/butterfly/scene.gltf"
+            gltf-model="/dragonfly/scene.gltf"
             class="clickable"
             visible="true"
             gesture-handler
