@@ -11,7 +11,10 @@ AFRAME.registerComponent("markerhandler", {
     animatedMarker.addEventListener("click", function (ev, target) {
       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
       if (aEntity && intersectedElement === aEntity) {
-        showModal();
+        // showModal();
+        document
+          .querySelector("#animated-model")
+          .setAttribute("display-animations", "");
       }
     });
 
@@ -34,9 +37,6 @@ AFRAME.registerComponent("display-animations", {
 });
 
 // Add this component to your model entity
-document
-  .querySelector("#animated-model")
-  .setAttribute("display-animations", "");
 
 // To interact with the model
 // AFRAME.registerComponent("gesture-detector", {
