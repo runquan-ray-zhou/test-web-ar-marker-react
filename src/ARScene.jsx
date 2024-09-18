@@ -285,7 +285,7 @@ function ARScene() {
             visible="true"
             gesture-handler
             look-at="[camera]"
-            animation-mixer="clip: Take 001; loop: repeat; timeScale: 1; autoplay: true"
+            animation-mixer="clip: *; loop: repeat; timeScale: 0.5; autoplay: true"
           ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
