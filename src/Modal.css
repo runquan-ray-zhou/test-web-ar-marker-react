@@ -1,6 +1,6 @@
 .Modal {
   #modal-container {
-    display: "none";
+    /* display: "none"; */
     position: "absolute";
     top: "30%";
     left: "50%";
