@@ -8114,6 +8114,7 @@
     {
       "buffer": 0,
       "byteLength": 93872,
+      "byteStride": 8,
       "name": "shortBufferViews",
       "target": 34962
     },
@@ -8128,6 +8129,7 @@
       "buffer": 0,
       "byteLength": 93872,
       "byteOffset": 302600,
+      "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
@@ -8135,6 +8137,7 @@
       "buffer": 0,
       "byteLength": 281616,
       "byteOffset": 396472,
+      "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
     },
@@ -8142,6 +8145,7 @@
       "buffer": 0,
       "byteLength": 187744,
       "byteOffset": 678088,
+      "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
     },
@@ -8161,12 +8165,14 @@
       "buffer": 0,
       "byteLength": 77736,
       "byteOffset": 928092,
+      "byteStride": 12,
       "name": "floatBufferViews"
     },
     {
       "buffer": 0,
       "byteLength": 108528,
       "byteOffset": 1005828,
+      "byteStride": 16,
       "name": "floatBufferViews"
     }
   ],
