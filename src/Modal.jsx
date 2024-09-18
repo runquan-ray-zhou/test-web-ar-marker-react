@@ -6,20 +6,32 @@ export default function Modal() {
       id="modal-container"
       style={{
         display: "none",
-        // position: "absolute",
-        // top: "30%",
-        // left: "50%",
-        // transform: "translate(-50%, -50%)",
-        // width: "200px",
-        // backgroundColor: "white",
-        // padding: "20px",
-        // borderRadius: "10px",
-        // boxShadow: "0 0 10px rgba(0,0,0,0.5)",
-        // zIndex: 100,
+        position: "absolute",
+        top: "30%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: "200px",
+        backgroundColor: "white",
+        padding: "20px",
+        borderRadius: "10px",
+        boxShadow: "0 0 10px rgba(0,0,0,0.5)",
+        zIndex: 100,
       }}
     >
-      <div className="modal-container-info">
-        <div className="modal-container-info-header">
+      <div
+        className="modal-container-info"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <div
+          className="modal-container-info-header"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <p>Find Presentations</p>
           <p>Location: S102D</p>
         </div>
