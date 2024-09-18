@@ -21,8 +21,6 @@ AFRAME.registerComponent("markerhandler", {
   },
 });
 
-// Add this component to your model entity
-
 // To interact with the model
 // AFRAME.registerComponent("gesture-detector", {
 //   schema: {
@@ -283,9 +281,9 @@ function ARScene() {
             gltf-model="/dragonfly/scene.gltf"
             class="clickable"
             visible="true"
-            gesture-handler
+            // gesture-handler
+            animation__spin="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true"
             look-at="[camera]"
-            animation-mixer="clip: *; loop: repeat; timeScale: 0.5; autoplay: true"
           ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
