@@ -11,28 +11,13 @@ AFRAME.registerComponent("markerhandler", {
     animatedMarker.addEventListener("click", function (ev, target) {
       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
       if (aEntity && intersectedElement === aEntity) {
-        // showModal();
-        document
-          .querySelector("#animated-model")
-          .setAttribute("display-animations", "");
+        showModal();
       }
     });
 
     const showModal = () => {
       modalContainer.style.display = "block";
     };
-  },
-});
-
-AFRAME.registerComponent("display-animations", {
-  init: function () {
-    this.el.addEventListener("model-loaded", (e) => {
-      const model = e.detail.model;
-      const animationNames = model.animations.map((a) => a.name).join(", ");
-      document
-        .querySelector("#animation-names")
-        .setAttribute("value", "Animations: " + animationNames);
-    });
   },
 });
 
@@ -274,7 +259,6 @@ function ARScene() {
   return (
     <>
       <a-scene
-        log-animations
         animation-mixer
         id="scene"
         arjs="sourceType: webcam;"
@@ -301,14 +285,8 @@ function ARScene() {
             visible="true"
             gesture-handler
             look-at="[camera]"
-            animation-mixer="clip: *; loop: repeat; timeScale: 1; autoplay: true"
+            animation-mixer="clip: Take 001; loop: repeat; timeScale: 1; autoplay: true"
           ></a-entity>
-          <a-text
-            id="animation-names"
-            value=""
-            position="0 -1 -3"
-            scale="0.5 0.5 0.5"
-          ></a-text>
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
