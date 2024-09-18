@@ -21,6 +21,7 @@ AFRAME.registerComponent("markerhandler", {
   },
 });
 
+// To interact with the model
 // AFRAME.registerComponent("gesture-detector", {
 //   schema: {
 //     element: { default: "" },
@@ -256,6 +257,7 @@ function ARScene() {
   return (
     <>
       <a-scene
+        animation-mixer
         id="scene"
         arjs="sourceType: webcam;"
         embedded
@@ -281,7 +283,7 @@ function ARScene() {
             visible="true"
             gesture-handler
             look-at="[camera]"
-            animation-mixer="clip: *; loop: repeat; timeScale: 1; autoplay='true'"
+            animation-mixer="clip: *; loop: repeat; timeScale: 1; autoplay=true"
           ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
