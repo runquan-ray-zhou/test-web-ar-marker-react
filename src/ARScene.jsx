@@ -21,6 +21,23 @@ AFRAME.registerComponent("markerhandler", {
   },
 });
 
+AFRAME.registerComponent("display-animations", {
+  init: function () {
+    this.el.addEventListener("model-loaded", (e) => {
+      const model = e.detail.model;
+      const animationNames = model.animations.map((a) => a.name).join(", ");
+      document
+        .querySelector("#animation-names")
+        .setAttribute("value", "Animations: " + animationNames);
+    });
+  },
+});
+
+// Add this component to your model entity
+document
+  .querySelector("#animated-model")
+  .setAttribute("display-animations", "");
+
 // To interact with the model
 // AFRAME.registerComponent("gesture-detector", {
 //   schema: {
@@ -257,6 +274,7 @@ function ARScene() {
   return (
     <>
       <a-scene
+        log-animations
         animation-mixer
         id="scene"
         arjs="sourceType: webcam;"
@@ -285,6 +303,12 @@ function ARScene() {
             look-at="[camera]"
             animation-mixer="clip: *; loop: repeat; timeScale: 1; autoplay: true"
           ></a-entity>
+          <a-text
+            id="animation-names"
+            value=""
+            position="0 -1 -3"
+            scale="0.5 0.5 0.5"
+          ></a-text>
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
