@@ -288,7 +288,7 @@ function ARScene() {
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
-      <Modal />
+      {/* <Modal /> */}
     </>
   );
 }
