@@ -1,1 +1,88 @@
+#modal-container {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  .modal-container-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-container-info-header {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin-top: 0;
+    }
+  }
+  .modal-container-info-body-button {
+    button {
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      border-bottom: 1px solid blue;
+    }
+    margin-bottom: 5px;
+  }
+  .modal-container-info-header-find {
+    font-weight: bold;
+  }
+  .modal-container-info-header-location {
+    font-size: 0.9em;
+  }
+  .modal-container-info-body-time {
+    width: auto;
+    padding: 12px;
+    padding-left: 20px;
+    margin: 0px -15px;
+    background: #002f88;
+    color: white;
+    p {
+      margin: 0;
+    }
+  }
+  .Session {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    .Session-info {
+      width: 200px;
+    }
 
+    .Session-icon {
+      span {
+        border: 2px solid blue;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      .fa-regular {
+        padding: 3px;
+      }
+      align-self: start;
+      font-size: 1.7em;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+    .Session-arrow {
+      font-size: 1.7em;
+    }
+    .Session-info-title {
+      font-weight: 900;
+    }
+    .Session-info-time,
+    .Session-info-leader,
+    .Session-info-location,
+    .Session-info-presenters,
+    .Session-info-presenter {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
