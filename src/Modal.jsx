@@ -65,6 +65,8 @@ function Modal() {
                 textDecoration: "none",
                 color: "black",
               }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="modal-container-info-body-session">
                 <div className="modal-container-info-body-time">
@@ -105,6 +107,8 @@ function Modal() {
                   textDecoration: "none",
                   color: "black",
                 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <div className="modal-container-info-body-time">
                   <p>2:10pm-2:25pm</p>
@@ -143,6 +147,8 @@ function Modal() {
                   textDecoration: "none",
                   color: "black",
                 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <div className="modal-container-info-body-time">
                   <p>2:45-3pm</p>
