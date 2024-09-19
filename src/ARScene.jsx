@@ -2,24 +2,24 @@ import "aframe";
 import "@ar-js-org/ar.js/aframe/build/aframe-ar.js";
 import Modal from "./Modal";
 
-AFRAME.registerComponent("markerhandler", {
-  init: function () {
-    const animatedMarker = document.querySelector("#animated-marker");
-    const aEntity = document.querySelector("#animated-model");
-    const modalContainer = document.querySelector("#modal-container");
+// AFRAME.registerComponent("markerhandler", {
+//   init: function () {
+//     const animatedMarker = document.querySelector("#animated-marker");
+//     const aEntity = document.querySelector("#animated-model");
+//     const modalContainer = document.querySelector("#modal-container");
 
-    animatedMarker.addEventListener("click", function (ev, target) {
-      const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-      if (aEntity && intersectedElement === aEntity) {
-        showModal();
-      }
-    });
+//     animatedMarker.addEventListener("click", function (ev, target) {
+//       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+//       if (aEntity && intersectedElement === aEntity) {
+//         showModal();
+//       }
+//     });
 
-    const showModal = () => {
-      modalContainer.style.display = "block";
-    };
-  },
-});
+//     const showModal = () => {
+//       modalContainer.style.display = "block";
+//     };
+//   },
+// });
 
 // To interact with the model
 AFRAME.registerComponent("gesture-detector", {
